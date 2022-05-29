@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background-color: #363642;
+            color: #2d2d36;
+            font-family: Helvetica, sans-serif;
+            padding: 4rem;
+        }
+
+        .toggle {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        .toggle-label {
+            font-size: 16px;
+            background: #fff;
+            padding: 1em;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto 1em;
+            box-shadow: 0 1px 2px 0 rgba(153, 153, 153, 0.35);
+            border-radius: 4px;
+        }
+
+        .toggle-label:after {
+            color: #ed3e44;
+            content: "+";
+            float: right;
+            font-weight: bold;
+        }
+
+        .toggle-content {
+            color: #b0b3c2;
+            font-family: monospace;
+            font-size: 16px;
+            margin-bottom: 1.5em;
+            padding: 1em;
+        }
+
+        .toggle-input {
+            display: none;
+        }
+
+        .toggle-input:not(checked)~.toggle-content {
+            display: none;
+        }
+
+        .toggle-input:checked~.toggle-content {
+            display: block;
+        }
+
+        .toggle-input:checked~.toggle-label:after {
+            content: "-";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toggle">
+        <!-- Checkbox toggle -->
+        <input type="checkbox" value="selected" id="beethoven-joke" class="toggle-input">
+        <label for="beethoven-joke" class="toggle-label">What was Beethoven's favorite fruit?</label>
+
+        <!-- Content to toggle -->
+        <div role="toggle" class="toggle-content">
+            BA-NA-NA-NA!
+        </div>
+    </div>
+
+    <div class="toggle">
+        <!-- Checkbox toggle -->
+        <input type="checkbox" value="selected" id="army-joke" class="toggle-input">
+        <label for="army-joke" class="toggle-label">Where did the general put his armies?</label>
+
+        <!-- Content to toggle -->
+        <div class="toggle-content">
+            Up his sleevies!
+        </div>
+    </div>
+
+    <div class="toggle">
+        <!-- Checkbox toggle -->
+        <input type="checkbox" value="selected" id="pepper-joke" class="toggle-input">
+        <label for="pepper-joke" class="toggle-label">What do you call a nosy pepper?</label>
+
+        <!-- Content to toggle -->
+        <div role="toggle" id="beethoven-joke" class="toggle-content">
+            Jalapeño business!
+        </div>
+    </div>
+</body>
+
+</html>
